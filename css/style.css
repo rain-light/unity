@@ -1,0 +1,208 @@
+/* Original design from https://dribbble.com/shots/2788093-Unity-FREE-PSD
+Made by https://dribbble.com/pixelzeesh
+EVERYTHING of this implementation, exception made for the external libraries
+such as normalize.css or fluid typography functions, is by me.
+Riccardo Battiato - https://github.com/rain-light
+Check the project page https://github.com/rain-light/unity
+And my website - https://riccardo.cc/ */
+/*
+  0 - 600px:      Phone
+  600 - 900px:    Tablet portrait
+  900 - 1200px:   Tablet landscape
+  [1200 - 1800] is where our normal styles apply
+  1800px + :      Big desktop
+  
+  $breakpoint arguement choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+  
+  ORDER: Base + typography > general layout + grid > page layout > components
+  
+  1em = 16px
+  */
+/* Resets and stuff handled by normalize.css */
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.heading-special {
+  font-size: 9em;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Logo */
+.logo {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .22em;
+  font-size: 3em;
+  padding: .3em .5em;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Social Icons*/
+.social-icon {
+  width: 2em;
+  height: 2em;
+  fill: currentColor;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.social-icon:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  width: 3.5em;
+  height: 2em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hamburger__line {
+  height: 2px;
+  background-color: currentColor;
+}
+
+.hamburger__line--big {
+  width: 100%;
+}
+
+.hamburger__line--medium {
+  width: 75%;
+}
+
+.hamburger__line--small {
+  width: 50%;
+}
+
+/* Separator line */
+.separator {
+  background-color: currentColor;
+  width: 2px;
+  height: 8em;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: url(/img/mountains.png);
+  background-size: cover;
+  background-position: center top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* MANAGE RESPONSIVENESS HERE */
+  font-size: 1rem;
+}
+
+.header__top {
+  margin-top: 5.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* INDIVIDUAL SCALING HERE */
+}
+
+@media only screen and (max-height: 600px) {
+  .header__top {
+    font-size: 1.2vh;
+  }
+}
+
+.header__social-icons {
+  margin-top: 2.8em;
+}
+
+.header__social-icons svg {
+  margin: 0 1em;
+}
+
+.header__hamburger {
+  position: absolute;
+  top: 5.5vh;
+  right: 3em;
+}
+
+.header__separator {
+  margin: 5em 0;
+  /* INDIVIDUAL SCALING HERE */
+}
+
+@media only screen and (max-height: 600px) {
+  .header__separator {
+    font-size: 1.2vh;
+  }
+}
+
+.header__main {
+  /* INDIVIDUAL SCALING HERE */
+}
+
+@media only screen and (max-width: 56.25em), only screen and (max-height: 600px) {
+  .header__main {
+    font-size: 1vmin;
+  }
+}
+/*# sourceMappingURL=style.css.map */

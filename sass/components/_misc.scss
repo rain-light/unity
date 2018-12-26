@@ -1,0 +1,60 @@
+/* Logo */
+.logo {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .22em;
+    font-size: 3em;
+    padding: .3em .5em;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Social Icons*/
+.social-icon {
+    width: 2em; //TESTING
+    height: 2em; //TESTING
+    fill: currentColor;
+    cursor: pointer;
+    transition: transform .3s;
+    
+    &:hover {
+        transform: scale(2);
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    width: 3.5em;
+    height: 2em;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    &__line {
+        height: 2px;
+        background-color: currentColor;
+
+        &--big {
+            width: 100%;
+        }
+
+        &--medium {
+            width: 75%;
+        }
+
+        &--small {
+            width: 50%;
+        }
+    }
+}
+
+/* Separator line */
+.separator {
+    background-color: currentColor;
+    width: 2px;
+    height: 8em;
+}
