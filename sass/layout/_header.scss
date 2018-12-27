@@ -22,6 +22,10 @@
         @media only screen and (max-height: 600px) {
             font-size: 1.2vh;
         }
+
+        @media only screen and (max-aspect-ratio: 70/71) {
+            margin-top: 15vh;
+        }
     }
 
     &__logo {
@@ -52,9 +56,44 @@
     }
 
     &__main {
+
+    }
+
+    &__heading {
         /* INDIVIDUAL SCALING HERE */
         @media only screen and (max-width: 56.25em), only screen and (max-height: 600px) {
             font-size: 1vmin;
         }
+    }
+
+    &__watch-video,
+    &__watch-video:link,
+    &__watch-video:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__watch-video {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-icon {
+            width: 2.5em;
+            height: 2.5em;
+            fill: currentColor;
+            margin-right: .5em;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 1.6em;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 3em;
     }
 }

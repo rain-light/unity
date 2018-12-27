@@ -5,6 +5,7 @@ such as normalize.css or fluid typography functions, is by me.
 Riccardo Battiato - https://github.com/rain-light
 Check the project page https://github.com/rain-light/unity
 And my website - https://riccardo.cc/ */
+/* COLORS */
 /*
   0 - 600px:      Phone
   600 - 900px:    Tablet portrait
@@ -130,6 +131,33 @@ body {
   height: 8em;
 }
 
+/* Buttons */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.btn--normal {
+  font-size: 1.6em;
+  border-radius: 3em;
+  padding: .7em 2.4em;
+  border: 1px solid #FF5617;
+}
+
+.btn--normal:hover {
+  background-color: transparent;
+  color: #FF5617;
+}
+
+.btn--primary {
+  color: #fff;
+  background-color: #FF5617;
+}
+
 .header {
   position: relative;
   height: 100vh;
@@ -171,6 +199,12 @@ body {
   }
 }
 
+@media only screen and (max-aspect-ratio: 70 / 71) {
+  .header__top {
+    margin-top: 15vh;
+  }
+}
+
 .header__social-icons {
   margin-top: 2.8em;
 }
@@ -196,13 +230,48 @@ body {
   }
 }
 
-.header__main {
+.header__heading {
   /* INDIVIDUAL SCALING HERE */
 }
 
 @media only screen and (max-width: 56.25em), only screen and (max-height: 600px) {
-  .header__main {
+  .header__heading {
     font-size: 1vmin;
   }
+}
+
+.header__watch-video, .header__watch-video:link, .header__watch-video:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__watch-video {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__watch-video-icon {
+  width: 2.5em;
+  height: 2.5em;
+  fill: currentColor;
+  margin-right: .5em;
+}
+
+.header__watch-video-text {
+  font-weight: 400;
+  font-size: 1.6em;
+}
+
+.header__button {
+  text-align: center;
+  margin-top: 3em;
 }
 /*# sourceMappingURL=style.css.map */

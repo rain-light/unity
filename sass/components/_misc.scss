@@ -58,3 +58,30 @@
     width: 2px;
     height: 8em;
 }
+
+/* Buttons */
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.btn--normal {
+    font-size: 1.6em;
+    border-radius: 3em;
+    padding: .7em 2.4em;
+    border: 1px solid $color-accent;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-accent;
+    }
+}
+
+.btn--primary {
+    color: #fff;
+    background-color: $color-accent;
+}
